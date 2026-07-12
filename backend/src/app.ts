@@ -39,11 +39,13 @@ export function createApp(): Express {
   );
   app.use(
     helmet.contentSecurityPolicy({
+      useDefaults: false,
       directives: {
         defaultSrc: ["'self'"],
         styleSrc: ["'self'", "'unsafe-inline'"],
         scriptSrc: ["'self'", "'unsafe-inline'"],
         imgSrc: ["'self'", 'data:'],
+        upgradeInsecureRequests: null,
       },
     }),
   );
