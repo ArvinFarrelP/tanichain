@@ -39,7 +39,7 @@ services:
       STELLAR_HORIZON_URL: ${STELLAR_HORIZON_URL:-https://horizon-testnet.stellar.org}
       STELLAR_FRIENDBOT_URL: ${STELLAR_FRIENDBOT_URL:-https://friendbot.stellar.org}
       STELLAR_EXPLORER_BASE_URL: ${STELLAR_EXPLORER_BASE_URL:-https://stellar.expert/explorer/testnet}
-      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3000}
+      CORS_ORIGIN: ${CORS_ORIGIN:-https://tanichain.arvinlabs.tech}
       RATE_LIMIT_WINDOW_MS: 900000
       RATE_LIMIT_MAX: 300
     ports:
@@ -58,14 +58,14 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000/api}
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://tanichain.arvinlabs.tech/api}
     container_name: tanichain-frontend
     restart: unless-stopped
     depends_on:
       backend:
         condition: service_healthy
     environment:
-      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000/api}
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://tanichain.arvinlabs.tech/api}
     ports:
       - "3000:3000"
     networks:
@@ -77,6 +77,10 @@ services:
       dockerfile: Dockerfile
     container_name: tanichain-nginx
     restart: unless-stopped
+
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+
     depends_on:
       backend:
         condition: service_healthy
@@ -84,6 +88,7 @@ services:
         condition: service_started
     ports:
       - "80:80"
+      - "443:443"
     networks:
       - tanichain-network
 
