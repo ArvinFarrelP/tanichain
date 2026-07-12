@@ -108,130 +108,56 @@ The platform combines a responsive Next.js frontend, an Express.js REST API, Pos
 
 # 📂 Project Structure
 
-````text
+```text
 tanichain/
-│
 ├── backend/
-│   ├── prisma/
-│   │   ├── schema.prisma
-│   │   └── seed.ts
+│   ├── prisma/schema.prisma
 │   ├── src/
-│   │   ├── config/
-│   │   │   ├── database.ts
-│   │   │   └── stellar.ts
-│   │   ├── middleware/
-│   │   │   ├── auth.ts
-│   │   │   ├── errorHandler.ts
-│   │   │   └── rateLimiter.ts
+│   │   ├── config/         # env, database client
+│   │   ├── middleware/      # auth, validation, rate limiting, error handling
 │   │   ├── modules/
-│   │   │   ├── activity/
-│   │   │   │   ├── activity.controller.ts
-│   │   │   │   ├── activity.routes.ts
-│   │   │   │   └── activity.service.ts
-│   │   │   ├── admin/
-│   │   │   │   ├── admin.controller.ts
-│   │   │   │   ├── admin.routes.ts
-│   │   │   │   └── admin.service.ts
-│   │   │   ├── analytics/
-│   │   │   │   ├── analytics.controller.ts
-│   │   │   │   ├── analytics.routes.ts
-│   │   │   │   └── analytics.service.ts
-│   │   │   ├── auth/
-│   │   │   │   ├── auth.controller.ts
-│   │   │   │   ├── auth.routes.ts
-│   │   │   │   └── auth.service.ts
+│   │   │   ├── auth/        # register, login, profile
+│   │   │   ├── user/        # profile update, change password
+│   │   │   ├── wallet/      # Stellar keypair, Friendbot, wallet service, QR codes
+│   │   │   ├── escrow/      # platform escrow wallet
+│   │   │   ├── product/     # farmer CRUD, buyer browsing
+│   │   │   ├── order/       # order lifecycle
+│   │   │   ├── payment/     # Payment Commitment + Escrow workflow
+│   │   │   ├── transaction/ # transaction history, CSV export
+│   │   │   ├── invoice/     # PDF invoice generation
+│   │   │   ├── export/      # CSV export helpers
 │   │   │   ├── notification/
-│   │   │   │   ├── notification.controller.ts
-│   │   │   │   ├── notification.routes.ts
-│   │   │   │   └── notification.service.ts
-│   │   │   ├── order/
-│   │   │   │   ├── order.controller.ts
-│   │   │   │   ├── order.routes.ts
-│   │   │   │   └── order.service.ts
-│   │   │   ├── product/
-│   │   │   │   ├── product.controller.ts
-│   │   │   │   ├── product.routes.ts
-│   │   │   │   └── product.service.ts
-│   │   │   ├── transaction/
-│   │   │   │   ├── transaction.controller.ts
-│   │   │   │   ├── transaction.routes.ts
-│   │   │   │   └── transaction.service.ts
-│   │   │   ├── user/
-│   │   │   │   ├── user.controller.ts
-│   │   │   │   ├── user.routes.ts
-│   │   │   │   └── user.service.ts
-│   │   │   └── wallet/
-│   │   │       ├── wallet.controller.ts
-│   │   │       ├── wallet.routes.ts
-│   │   │       └── wallet.service.ts
-│   │   ├── swagger/
-│   │   │   └── swagger.ts
-│   │   ├── utils/
-│   │   │   ├── crypto.ts
-│   │   │   └── logger.ts
-│   │   ├── app.ts
-│   │   └── server.ts
-│   ├── Dockerfile
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── .env.example
-│
+│   │   │   ├── analytics/   # role-aware + platform-wide analytics
+│   │   │   ├── activity/    # audit log
+│   │   │   └── admin/       # admin-only management endpoints
+│   │   ├── utils/           # jwt, crypto, logger, AppError
+│   │   └── swagger/
+│   └── Dockerfile
 ├── frontend/
-│   ├── app/
-│   │   ├── (auth)/
-│   │   │   ├── login/
-│   │   │   └── register/
-│   │   ├── (dashboard)/
-│   │   │   ├── admin/
-│   │   │   ├── farmer/
-│   │   │   └── buyer/
-│   │   ├── api/
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── components/
-│   │   ├── common/
-│   │   ├── layout/
-│   │   └── ui/
-│   ├── hooks/
-│   ├── lib/
-│   │   ├── api.ts
-│   │   └── utils.ts
-│   ├── public/
-│   ├── styles/
-│   ├── Dockerfile
-│   ├── package.json
-│   ├── next.config.js
-│   └── .env.example
-│
-├── docker/
-│   └── nginx/
-│       ├── Dockerfile
-│       └── nginx.conf
-│
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── (landing, /login, /register)
+│   │   │   ├── products/, products/[id]/       # marketplace
+│   │   │   └── dashboard/
+│   │   │       ├── products/, orders/          # farmer/buyer workflows
+│   │   │       ├── transactions/, profile/
+│   │   │       └── admin/                      # overview, users, products, orders, transactions, wallets, activity
+│   │   ├── components/ui/   # shadcn-style primitives
+│   │   ├── components/layout/  # DashboardHeader, AdminNav
+│   │   ├── components/products/ # ProductForm
+│   │   ├── lib/             # api client, formatting, utils
+│   │   └── store/           # zustand auth store
+│   └── Dockerfile
+├── docker/nginx/
 ├── docs/
-│   ├── API.md
-│   ├── DEPLOYMENT.md
-│   ├── SECURITY.md
-│   ├── PROGRESS.md
-│   └── screenshots/
-│       ├── landing.png
-│       ├── marketplace.png
-│       ├── dashboard.png
-│       ├── payment.png
-│       ├── analytics.png
-│       └── swagger.png
-│
 ├── docker-compose.yml
-├── .env.example
-├── .gitignore
-├── README.md
-└── LICENSE
+└── .env.example
+```
 
 ---
 
 # 🏗 System Architecture
 
-```text
                        Users
                          │
                          │ HTTPS
@@ -248,20 +174,22 @@ tanichain/
          ┌───────────────┴───────────────┐
          │                               │
          ▼                               ▼
- Next.js Frontend                Express Backend
- (React + TypeScript)        (REST API + Prisma ORM)
-         │                               │
-         │ REST API                      │
-         └───────────────┬───────────────┘
-                         │
-                         ▼
-                   PostgreSQL 16
-                         │
-              ┌──────────┴──────────┐
-              │                     │
-              ▼                     ▼
-      Stellar Horizon API     Swagger OpenAPI
-        (Blockchain)           Documentation
+
+Next.js Frontend Express Backend
+(React + TypeScript) (REST API + Prisma ORM)
+│ │
+│ REST API │
+└───────────────┬───────────────┘
+│
+▼
+PostgreSQL 16
+│
+┌──────────┴──────────┐
+│ │
+▼ ▼
+Stellar Horizon API Swagger OpenAPI
+(Blockchain) Documentation
+
 ````
 
 ---
@@ -295,7 +223,7 @@ Docker Compose
               │
               ▼
          PostgreSQL Database
-```
+````
 
 ---
 
