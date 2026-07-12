@@ -1,3 +1,4 @@
+````markdown
 # 🌾 TaniChain
 
 <div align="center">
@@ -153,7 +154,6 @@ tanichain/
 ├── docker-compose.yml
 └── .env.example
 ```
-
 ````
 
 ---
@@ -1216,4 +1216,3 @@ Next.js • Express.js • PostgreSQL • Docker • Nginx • Stellar Testnet
 ⭐ If you found this project interesting, consider giving it a star!
 
 </div>
-````
