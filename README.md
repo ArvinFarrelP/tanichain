@@ -108,7 +108,7 @@ The platform combines a responsive Next.js frontend, an Express.js REST API, Pos
 
 # 📂 Project Structure
 
-```text
+````text
 tanichain/
 │
 ├── backend/
@@ -231,6 +231,7 @@ tanichain/
 
 # 🏗 System Architecture
 
+```text
                        Users
                          │
                          │ HTTPS
@@ -261,7 +262,7 @@ tanichain/
               ▼                     ▼
       Stellar Horizon API     Swagger OpenAPI
         (Blockchain)           Documentation
-```
+````
 
 ---
 
