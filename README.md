@@ -158,6 +158,7 @@ tanichain/
 
 # 🏗 System Architecture
 
+```text
                        Users
                          │
                          │ HTTPS
@@ -190,7 +191,7 @@ PostgreSQL 16
 Stellar Horizon API Swagger OpenAPI
 (Blockchain) Documentation
 
-````
+```
 
 ---
 
@@ -223,7 +224,7 @@ Docker Compose
               │
               ▼
          PostgreSQL Database
-````
+```
 
 ---
 
