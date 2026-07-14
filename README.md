@@ -947,6 +947,12 @@ Administrators can monitor all platform activities.
 
 ---
 
+## 🌌 Stellar Testnet Explorer
+
+<img src="./docs/screenshots/stellar-explorer.png" alt="Stellar Testnet Explorer" width="100%">
+
+---
+
 ## 📖 Swagger API Documentation
 
 <img src="./docs/screenshots/swagger1.png" alt="Swagger Overview" width="100%">
