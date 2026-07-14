@@ -965,7 +965,7 @@ Infrastructure
 
 # 📸 Screenshots
 
-> Screenshots will be updated as the project evolves.
+> Below are screenshots of the current TaniChain application.
 
 ## 🌐 Landing Page
 
@@ -979,9 +979,9 @@ Infrastructure
 
 ---
 
-## 📊 Dashboard
+## 📊 User Dashboard
 
-<img src="./docs/screenshots/dashboard.png" alt="Dashboard" width="100%">
+<img src="./docs/screenshots/dashboard.png" alt="User Dashboard" width="100%">
 
 ---
 
@@ -991,15 +991,21 @@ Infrastructure
 
 ---
 
-## 📈 Analytics
+## 📖 Swagger API Documentation
 
-<img src="./docs/screenshots/analytics.png" alt="Analytics Dashboard" width="100%">
+<img src="./docs/screenshots/swagger1.png" alt="Swagger Overview" width="100%">
 
----
+<br>
 
-## 📖 Swagger Documentation
+<img src="./docs/screenshots/swagger2.png" alt="Authentication Endpoints" width="100%">
 
-<img src="./docs/screenshots/swagger.png" alt="Swagger API" width="100%">
+<br>
+
+<img src="./docs/screenshots/swagger3.png" alt="Marketplace Endpoints" width="100%">
+
+<br>
+
+<img src="./docs/screenshots/swagger4.png" alt="Admin Endpoints" width="100%">
 
 ---
 
