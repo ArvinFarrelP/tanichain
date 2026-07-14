@@ -8,7 +8,10 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 ![Nginx](https://img.shields.io/badge/Nginx-Reverse_Proxy-009639?logo=nginx)
-![Stellar](https://img.shields.io/badge/Stellar-Testnet-08B5E5)
+![AWS EC2](https://img.shields.io/badge/AWS-EC2-FF9900?logo=amazonaws&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-CDN-F38020?logo=cloudflare&logoColor=white)
+![HTTPS](https://img.shields.io/badge/HTTPS-Lets_Encrypt-success?logo=letsencrypt)
+![Stellar](https://img.shields.io/badge/Stellar-Testnet-08B5E5?logo=stellar)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Stars](https://img.shields.io/github/stars/ArvinFarrelP/tanichain?style=social)
 ![Forks](https://img.shields.io/github/forks/ArvinFarrelP/tanichain?style=social)
@@ -26,15 +29,15 @@ A production-ready agricultural payment platform that enables transparent, escro
 
 ### Website
 
-https://tanichain.arvinlabs.tech
+- 🌐 Website: https://tanichain.arvinlabs.tech
 
 ### API Documentation
 
-https://tanichain.arvinlabs.tech/api/docs
+- 📖 Swagger: https://tanichain.arvinlabs.tech/api/docs
 
 ### GitHub Repository
 
-https://github.com/ArvinFarrelP/tanichain
+- 💻 GitHub: https://github.com/ArvinFarrelP/tanichain
 
 ---
 
@@ -443,10 +446,10 @@ Expected output:
 ```
 STATUS
 
-healthy
-healthy
-healthy
-healthy
+tanichain-nginx        healthy
+tanichain-frontend     healthy
+tanichain-backend      healthy
+tanichain-postgres     healthy
 ```
 
 ---
@@ -456,7 +459,7 @@ healthy
 Backend Health Endpoint
 
 ```bash
-curl http://localhost:4000/health
+curl https://tanichain.arvinlabs.tech/api/health
 ```
 
 Response
@@ -627,30 +630,7 @@ docker compose exec postgres psql -U tanichain
 
 ---
 
-# 🌱 Demo Data
-
-Generate demo accounts and sample data.
-
-```bash
-docker compose exec backend npm run seed
-```
-
-This command automatically creates:
-
-- Farmers
-- Buyers
-- Administrator
-- Products
-- Orders
-- Transactions
-- Stellar Wallets
-- Payment Commitments
-
-making the application ready for demonstrations without manual setup.
-
----
-
-# 🚀 Features
+# 🚀 Detailed Features
 
 ## 👥 Multi-Role Authentication
 
@@ -850,7 +830,7 @@ Built using:
 
 ---
 
-# 👑 Administrator Dashboard
+# 👑 Administrator Features
 
 Administrators have complete visibility over the platform.
 
@@ -898,67 +878,43 @@ Administrators can monitor all platform activities.
 
 ---
 
-# 🔐 Security
-
-TaniChain follows modern web security best practices.
-
-Authentication
-
-- JWT Authentication
-- bcrypt Password Hashing
-- Role-Based Access Control
-
-API Protection
-
-- Helmet
-- Rate Limiting
-- Input Validation
-- Error Handling
-
-Infrastructure
-
-- HTTPS (Let's Encrypt)
-- Cloudflare CDN
-- Docker Network Isolation
-- Reverse Proxy (Nginx)
-
----
-
 # ⭐ Project Highlights
 
 ✔ Production-ready deployment
 
+✔ Live production deployment on AWS EC2
+
+✔ Custom domain with HTTPS
+
+✔ Let's Encrypt SSL Certificate
+
+✔ Cloudflare DNS & CDN integration
+
 ✔ Dockerized infrastructure
-
-✔ HTTPS with Let's Encrypt
-
-✔ Cloudflare integration
-
-✔ Custom domain
-
-✔ Swagger OpenAPI Documentation
-
-✔ Blockchain-powered payment verification
-
-✔ Responsive web application
-
-✔ RESTful API architecture
-
-✔ PostgreSQL database
 
 ✔ Docker Compose deployment
 
 ✔ Nginx Reverse Proxy
 
+✔ RESTful API architecture
+
+✔ PostgreSQL database
+
+✔ Swagger OpenAPI Documentation
+
 ✔ Role-Based Access Control (RBAC)
 
-✔ Interactive analytics dashboard
+✔ Blockchain-powered payment verification
 
 ✔ Stellar Testnet integration
 
 ✔ Modern UI built with Next.js 15
 
 ✔ TypeScript across frontend and backend
+
+✔ Responsive web application
+
+✔ Interactive analytics dashboard
 
 ---
 
@@ -1039,28 +995,48 @@ Additional project documentation is available inside the **docs/** directory.
 
 # 🧪 Testing
 
-Backend
+Verify that all services are running correctly after deployment.
+
+## Start the Application
 
 ```bash
-npm test
+docker compose up --build -d
 ```
 
-Run Docker Stack
+## Check Running Containers
 
 ```bash
-docker compose up --build
+docker ps
 ```
 
-Generate Demo Data
+Expected containers:
 
-```bash
-docker compose exec backend npm run seed
-```
+- tanichain-nginx
+- tanichain-frontend
+- tanichain-backend
+- tanichain-postgres
 
-Health Check
+## Health Check
 
 ```bash
 curl https://tanichain.arvinlabs.tech/api/health
+```
+
+Expected response:
+
+```json
+{
+  "success": true,
+  "message": "TaniChain API is healthy"
+}
+```
+
+## Swagger Documentation
+
+Open:
+
+```
+https://tanichain.arvinlabs.tech/api/docs
 ```
 
 ---
@@ -1172,23 +1148,19 @@ This project would not have been possible without these amazing technologies and
 
 ---
 
-# 🏆 Hackathon Information
+# 🏆 APAC Stellar Hackathon 2026
+
+**Track**
+
+Local Finance & Real World Access
 
 **Project**
 
 TaniChain
 
-**Event**
-
-APAC Stellar Hackathon 2026
-
-**Track**
-
-Real-World Payments & Financial Inclusion
-
 **Core Idea**
 
-A transparent agricultural payment platform leveraging the Stellar blockchain to provide secure, verifiable, and auditable payment commitments for farmers and buyers.
+TaniChain leverages Stellar to create a transparent agricultural payment network where payment commitments are securely recorded on-chain, enabling trusted transactions, reducing payment disputes, and improving financial accessibility for farmers and buyers.
 
 ---
 
@@ -1196,7 +1168,7 @@ A transparent agricultural payment platform leveraging the Stellar blockchain to
 
 **Arvin Farrel Pramuditya**
 
-Backend Engineer • Blockchain Developer • AI Developer
+Backend Engineer • Blockchain Developer
 
 GitHub
 
