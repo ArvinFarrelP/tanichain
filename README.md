@@ -159,37 +159,36 @@ tanichain/
 # 🏗 System Architecture
 
 ```text
-                       Users
-                         │
-                         │ HTTPS
-                         ▼
-                  Cloudflare CDN
-                         │
-                         ▼
-                Let's Encrypt SSL
-                         │
-                         ▼
-              Nginx Reverse Proxy
-               (HTTPS Termination)
-                         │
-         ┌───────────────┴───────────────┐
-         │                               │
-         ▼                               ▼
-
-Next.js Frontend Express Backend
-(React + TypeScript) (REST API + Prisma ORM)
-│ │
-│ REST API │
-└───────────────┬───────────────┘
-│
-▼
-PostgreSQL 16
-│
-┌──────────┴──────────┐
-│ │
-▼ ▼
-Stellar Horizon API Swagger OpenAPI
-(Blockchain) Documentation
+                              Users
+                                │
+                                │ HTTPS
+                                ▼
+                         Cloudflare CDN
+                                │
+                                ▼
+                       Let's Encrypt SSL
+                                │
+                                ▼
+                     Nginx Reverse Proxy
+                      (HTTPS Termination)
+                                │
+                ┌───────────────┴───────────────┐
+                │                               │
+                ▼                               ▼
+     Next.js Frontend                 Express Backend
+   (React + TypeScript)             (REST API + Prisma)
+                │                               │
+                │         REST API              │
+                └───────────────┬───────────────┘
+                                │
+                                ▼
+                           PostgreSQL 16
+                                │
+                ┌───────────────┴───────────────┐
+                │                               │
+                ▼                               ▼
+                  Stellar Horizon API      Swagger OpenAPI
+                      (Blockchain)         Documentation
 
 ```
 
@@ -198,32 +197,32 @@ Stellar Horizon API Swagger OpenAPI
 # 🌍 Production Deployment
 
 ```text
-Internet
-    │
-    ▼
-Cloudflare DNS
-    │
-    ▼
-tanichain.arvinlabs.tech
-    │
-HTTPS (TLS)
-    │
-    ▼
-Ubuntu Server (AWS EC2)
-    │
-Docker Compose
-    │
-    ▼
-┌─────────────────────────────────────────────┐
-│                 Nginx                       │
-│                                             │
-│  /          → Frontend (Next.js)            │
-│  /api/*     → Backend (Express.js)          │
-│  /api/docs  → Swagger UI                    │
-└─────────────────────────────────────────────┘
-              │
-              ▼
-         PostgreSQL Database
+                           Internet
+                              │
+                              ▼
+                        Cloudflare DNS
+                              │
+                              ▼
+                  tanichain.arvinlabs.tech
+                              │
+                         HTTPS (TLS)
+                              │
+                              ▼
+                    Ubuntu Server (AWS EC2)
+                              │
+                        Docker Compose
+                              │
+                              ▼
+        ┌─────────────────────────────────────────────┐
+        │                    Nginx                    │
+        │                                             │
+        │  /           → Frontend (Next.js)           │
+        │  /api/*      → Backend (Express.js)         │
+        │  /api/docs   → Swagger UI                   │
+        └─────────────────────────────────────────────┘
+                              │
+                              ▼
+                     PostgreSQL Database
 ```
 
 ---
@@ -231,30 +230,30 @@ Docker Compose
 # 🔄 Application Flow
 
 ```text
-Buyer/Farmer
-      │
-      ▼
-Frontend (Next.js)
-      │
-REST API Request
-      │
-      ▼
-Express Backend
-      │
-JWT Authentication
-      │
-Business Logic
-      │
-Prisma ORM
-      │
-      ▼
-PostgreSQL
-      │
-      ▼
-Response
-      │
-      ▼
-Frontend UI Update
+                         Buyer / Farmer
+                               │
+                               ▼
+                      Frontend (Next.js)
+                               │
+                       REST API Request
+                               │
+                               ▼
+                      Express.js Backend
+                               │
+                      JWT Authentication
+                               │
+                         Business Logic
+                               │
+                           Prisma ORM
+                               │
+                               ▼
+                           PostgreSQL
+                               │
+                               ▼
+                            Response
+                               │
+                               ▼
+                     Frontend UI Update
 ```
 
 ---
@@ -262,29 +261,29 @@ Frontend UI Update
 # ⛓ Blockchain Payment Flow
 
 ```text
-Buyer
-  │
-Creates Order
-  │
-  ▼
-Payment Commitment
-  │
-  ▼
-Backend Validation
-  │
-  ▼
-Record Metadata
-to Stellar Testnet
-  │
-  ▼
-Transaction Hash
-Stored in Database
-  │
-  ▼
-Farmer Verification
-  │
-  ▼
-Payment Released
+                             Buyer
+                               │
+                        Creates Order
+                               │
+                               ▼
+                    Payment Commitment
+                               │
+                               ▼
+                     Backend Validation
+                               │
+                               ▼
+                 Record Metadata to
+                    Stellar Testnet
+                               │
+                               ▼
+               Transaction Hash Stored
+                      in Database
+                               │
+                               ▼
+                   Farmer Verification
+                               │
+                               ▼
+                     Payment Released
 ```
 
 ---
