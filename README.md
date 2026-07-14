@@ -95,6 +95,7 @@ The platform combines a responsive Next.js frontend, an Express.js REST API, Pos
 
 ## Blockchain
 
+- Stellar SDK
 - Stellar Testnet
 - Horizon API
 
@@ -980,6 +981,26 @@ Administrators can monitor all platform activities.
 
 ---
 
+# ⛓️ Stellar Integration
+
+TaniChain integrates directly with the Stellar Testnet using the Stellar SDK and Horizon API.
+
+Current implementation includes:
+
+- Automatic Stellar wallet creation
+- Friendbot wallet funding
+- Payment commitment recording
+- Transaction verification
+- Explorer transaction links
+
+This project currently does **not deploy a Soroban Smart Contract**.
+
+Instead, payment commitments are implemented through Stellar accounts and blockchain transaction verification.
+
+Future releases will extend the payment workflow using Soroban Smart Contracts.
+
+---
+
 # 📂 Documentation
 
 Additional project documentation is available inside the **docs/** directory.
@@ -1047,10 +1068,10 @@ Future improvements planned for TaniChain.
 
 ## Blockchain
 
-- Smart Contract Support
+- Soroban Smart Contract Escrow
 - Multi-Signature Wallet
-- Soroban Integration
 - Stellar Mainnet Deployment
+- Cross-border Payments
 
 ---
 
@@ -1168,7 +1189,7 @@ TaniChain leverages Stellar to create a transparent agricultural payment network
 
 **Arvin Farrel Pramuditya**
 
-Backend Engineer • Blockchain Developer
+Backend Engineer • Blockchain Developer • Open Source Contributor
 
 GitHub
 
