@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/screenshots/logo.png" alt="TaniChain Logo" width="320" />
+<img src="docs/screenshots/logo.png" alt="TaniChain Logo" width="600" />
 
 <br/>
 
