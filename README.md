@@ -687,21 +687,23 @@ Instead of relying on traditional payment confirmation, TaniChain introduces a t
 Workflow:
 
 ```text
-Buyer
-   │
-Create Order
-   │
-   ▼
-Payment Commitment
-   │
-   ▼
-Blockchain Record
-   │
-   ▼
-Farmer Confirmation
-   │
-   ▼
-Payment Released
+                           Buyer
+                             │
+                             ▼
+                      Create Order
+                             │
+                             ▼
+                   Payment Commitment
+                             │
+                             ▼
+               Record Metadata to Stellar
+                      Testnet Blockchain
+                             │
+                             ▼
+                  Farmer Confirmation
+                             │
+                             ▼
+                    Payment Released
 ```
 
 This provides:
@@ -1223,13 +1225,23 @@ TaniChain leverages Stellar to create a transparent agricultural payment network
 
 Backend Engineer • Blockchain Developer • Open Source Contributor
 
-GitHub
-
+**GitHub**
 https://github.com/ArvinFarrelP
 
-LinkedIn
-
+**LinkedIn**
 https://linkedin.com/in/ArvinFarrelP
+
+---
+
+# 📬 Project Contact
+
+For questions, feedback, partnerships, or collaboration:
+
+**Email**
+hello.tanichain@gmail.com
+
+**Project Repository**
+https://github.com/ArvinFarrelP/tanichain
 
 ---
 
