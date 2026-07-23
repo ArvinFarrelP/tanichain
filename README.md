@@ -4,7 +4,7 @@
 
 <br/>
 
-**Transparent Agricultural Payment Network powered by Stellar**
+**Transparent Agricultural Payment Network built on Stellar**
 
 A production-ready agricultural payment platform that enables transparent, escrow-backed, blockchain-verifiable transactions between farmers and buyers using the Stellar Testnet.
 
