@@ -1,6 +1,14 @@
-# 🌾 TaniChain
-
 <div align="center">
+
+<img src="docs/screenshots/logo.png" alt="TaniChain Logo" width="160" />
+
+# TaniChain
+
+**Transparent Agricultural Payment Network powered by Stellar**
+
+A production-ready agricultural payment platform that enables transparent, escrow-backed, blockchain-verifiable transactions between farmers and buyers using the Stellar Testnet.
+
+<br/>
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
 ![Express](https://img.shields.io/badge/Express.js-5-000000?logo=express)
@@ -16,10 +24,6 @@
 ![Stars](https://img.shields.io/github/stars/ArvinFarrelP/tanichain?style=social)
 ![Forks](https://img.shields.io/github/forks/ArvinFarrelP/tanichain?style=social)
 ![Issues](https://img.shields.io/github/issues/ArvinFarrelP/tanichain)
-
-**Transparent Agricultural Payment Network powered by Stellar**
-
-A production-ready agricultural payment platform that enables transparent, escrow-backed, blockchain-verifiable transactions between farmers and buyers using the Stellar Testnet.
 
 </div>
 
@@ -925,25 +929,25 @@ Administrators can monitor all platform activities.
 
 ## 🌐 Landing Page
 
-<img src="./docs/screenshots/landing.png" alt="Landing Page" width="100%">
+<img src="docs/screenshots/landing.png" alt="Landing Page" width="100%">
 
 ---
 
 ## 🛒 Marketplace
 
-<img src="./docs/screenshots/marketplace.png" alt="Marketplace" width="100%">
+<img src="docs/screenshots/marketplace.png" alt="Marketplace" width="100%">
 
 ---
 
 ## 📊 User Dashboard
 
-<img src="./docs/screenshots/dashboard.png" alt="User Dashboard" width="100%">
+<img src="docs/screenshots/dashboard.png" alt="User Dashboard" width="100%">
 
 ---
 
 ## 💰 Payment Commitment
 
-<img src="./docs/screenshots/payment.png" alt="Payment Commitment" width="100%">
+<img src="docs/screenshots/payment.png" alt="Payment Commitment" width="100%">
 
 ---
 
@@ -953,7 +957,7 @@ TaniChain integrates with the Stellar Testnet using the Stellar SDK and Horizon 
 
 ### Wallet Explorer
 
-<img src="./docs/screenshots/stellar-wallet.png" alt="Stellar Testnet Wallet" width="100%">
+<img src="docs/screenshots/stellar-wallet.png" alt="Stellar Testnet Wallet" width="100%">
 
 View the wallet on Stellar Expert:
 
@@ -963,13 +967,13 @@ https://stellar.expert/explorer/testnet/account/GD7ID4IKVS3ZYCBYMDZ2VWAB7YAINYF3
 
 ### Transaction History
 
-<img src="./docs/screenshots/stellar-transactions.png" alt="Stellar Transaction History" width="100%">
+<img src="docs/screenshots/stellar-transactions.png" alt="Stellar Transaction History" width="100%">
 
 <br>
 
 ### Sample Transaction
 
-<img src="./docs/screenshots/stellar-transaction.png" alt="Stellar Transaction Details" width="100%">
+<img src="docs/screenshots/stellar-transaction.png" alt="Stellar Transaction Details" width="100%">
 
 View the transaction on Stellar Expert:
 
@@ -979,19 +983,19 @@ https://stellar.expert/explorer/testnet/tx/8df5a31782b1b3c244048519cb7aaa22faa1f
 
 ## 📖 Swagger API Documentation
 
-<img src="./docs/screenshots/swagger1.png" alt="Swagger Overview" width="100%">
+<img src="docs/screenshots/swagger1.png" alt="Swagger Overview" width="100%">
 
 <br>
 
-<img src="./docs/screenshots/swagger2.png" alt="Authentication Endpoints" width="100%">
+<img src="docs/screenshots/swagger2.png" alt="Authentication Endpoints" width="100%">
 
 <br>
 
-<img src="./docs/screenshots/swagger3.png" alt="Marketplace Endpoints" width="100%">
+<img src="docs/screenshots/swagger3.png" alt="Marketplace Endpoints" width="100%">
 
 <br>
 
-<img src="./docs/screenshots/swagger4.png" alt="Admin Endpoints" width="100%">
+<img src="docs/screenshots/swagger4.png" alt="Admin Endpoints" width="100%">
 
 ---
 
