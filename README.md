@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="docs/screenshots/logo.png" alt="TaniChain Logo" width="400" />
+<img src="docs/screenshots/logo.png" alt="TaniChain Logo" width="320" />
+
+<br/>
 
 **Transparent Agricultural Payment Network powered by Stellar**
 
